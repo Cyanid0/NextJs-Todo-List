@@ -16,5 +16,5 @@ function Skeleton({
     />
   )
 }
- 
+
 export { Skeleton }

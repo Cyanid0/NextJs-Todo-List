@@ -21,16 +21,12 @@ export default async function Home() {
         <span className='text-5xl'> Todo List </span>
         <Link href='/new' className='text-lg border px-3 py-1 rounded-md hover:text-black hover:bg-white transition duration-500 hover:translate-y-[-5px]'> New </Link>
       </header>
-      <Suspense fallback={<div>Loading...</div>}>
+      <ul className="m-4 border text-xl rounded-md py-2 px-3">
         {
-          await new Promise(resolve => setTimeout(resolve, 3000))
-        }
-        <ul className="m-4 border text-xl rounded-md py-2 px-3">
-          {todos.map(todo => (
-            <TodoItem key={todo.id} {...todo} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
+          todos.map(todo => (
+              <TodoItem key={todo.id} {...todo} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
           ))}
-        </ul>
-      </Suspense>
+      </ul>
     </>
   );
 }

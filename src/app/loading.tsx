@@ -1,7 +1,8 @@
+import { Skeleton } from '../components/skeleton'
+
 export default function Loading() {
   return (
-    <span className="text-5xl w-screen h-screen flex justify-center items-center">
-      Loading...
-    </span>
+    // <Skeleton className='h-4 w-[250px]'/>
+    <div className='flex w-screen h-screen justify-center items-center text-5xl'>Loading...</div>
   )
 }
